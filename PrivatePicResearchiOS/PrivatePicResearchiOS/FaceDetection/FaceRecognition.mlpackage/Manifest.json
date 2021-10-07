@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "448A2408-F956-40B8-9D37-183C2BBD7F1F": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "4DDD8D4B-CCD7-4DC6-94EA-ABF093D64DCD": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "94EBEC54-6023-4F0C-A2AA-8FF23DA7BF18": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "FaceRecognition.mlmodel",
+            "path": "com.apple.CoreML/FaceRecognition.mlmodel"
+        }
+    },
+    "rootModelIdentifier": "94EBEC54-6023-4F0C-A2AA-8FF23DA7BF18"
+}
