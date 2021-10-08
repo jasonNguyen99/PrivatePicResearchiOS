@@ -10,9 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private let screenProtecter = ScreenProtector()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        screenProtecter.startPreventingRecording()
+        screenProtecter.startPreventingScreenshot()
+//        screenProtecter.startPreventingScreenshot()
         // Override point for customization after application launch.
         return true
     }
