@@ -19,5 +19,10 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func blockScreenShotDetectionButton() {
+        let vc = PPBlockScreenShotViewController(nibName: "PPBlockScreenShotViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 

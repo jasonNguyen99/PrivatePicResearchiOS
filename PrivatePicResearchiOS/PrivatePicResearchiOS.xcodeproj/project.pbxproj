@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155E77BC27103C8900A6B5FA /* PPFaceDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155E77BB27103C8900A6B5FA /* PPFaceDetection.storyboard */; };
+		159D5A0F270FEABD008AB014 /* PPBlockScreenShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159D5A0D270FEABD008AB014 /* PPBlockScreenShotViewController.swift */; };
+		159D5A10270FEABD008AB014 /* PPBlockScreenShotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159D5A0E270FEABD008AB014 /* PPBlockScreenShotViewController.xib */; };
 		15EBC264270EE833003CEA32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC263270EE833003CEA32 /* AppDelegate.swift */; };
 		15EBC266270EE833003CEA32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC265270EE833003CEA32 /* SceneDelegate.swift */; };
 		15EBC268270EE833003CEA32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC267270EE833003CEA32 /* ViewController.swift */; };
@@ -22,9 +25,12 @@
 		15EBC29F270EE86E003CEA32 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC299270EE86E003CEA32 /* UIImage+Extension.swift */; };
 		15EBC2A0270EE86E003CEA32 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC29A270EE86E003CEA32 /* UIColor+Extensions.swift */; };
 		15EBC2A1270EE86E003CEA32 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC29B270EE86E003CEA32 /* UIViewController+Extension.swift */; };
-		15EBC2A5270EE88C003CEA32 /* FaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC2A4270EE88C003CEA32 /* FaceDetectionViewController.swift */; };
+		15EBC2A5270EE88C003CEA32 /* PPFaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC2A4270EE88C003CEA32 /* PPFaceDetectionViewController.swift */; };
 		15EBC2B4270EE8A5003CEA32 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC2B3270EE8A5003CEA32 /* VideoCapture.swift */; };
 		15FBAF25270EF93500D2FB08 /* FaceRecognition.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 15FBAF24270EF93500D2FB08 /* FaceRecognition.mlpackage */; };
+		1E15C3A5CD18710EEE1BA15E /* Pods_PrivatePicResearchiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7811D2A7E41AD730A515B9 /* Pods_PrivatePicResearchiOS.framework */; };
+		65DBA54260EF59B5872766B9 /* Pods_PrivatePicResearchiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB007F253B6A716B2596742E /* Pods_PrivatePicResearchiOSTests.framework */; };
+		81ADB612265A7C4BEC7797CF /* Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10D2F85297D6C20CC5FE601 /* Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		155E77BB27103C8900A6B5FA /* PPFaceDetection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PPFaceDetection.storyboard; sourceTree = "<group>"; };
+		159D5A0D270FEABD008AB014 /* PPBlockScreenShotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPBlockScreenShotViewController.swift; sourceTree = "<group>"; };
+		159D5A0E270FEABD008AB014 /* PPBlockScreenShotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPBlockScreenShotViewController.xib; sourceTree = "<group>"; };
 		15EBC260270EE833003CEA32 /* PrivatePicResearchiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatePicResearchiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EBC263270EE833003CEA32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EBC265270EE833003CEA32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +73,18 @@
 		15EBC299270EE86E003CEA32 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		15EBC29A270EE86E003CEA32 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		15EBC29B270EE86E003CEA32 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		15EBC2A4270EE88C003CEA32 /* FaceDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetectionViewController.swift; sourceTree = "<group>"; };
+		15EBC2A4270EE88C003CEA32 /* PPFaceDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPFaceDetectionViewController.swift; sourceTree = "<group>"; };
 		15EBC2B3270EE8A5003CEA32 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		15FBAF24270EF93500D2FB08 /* FaceRecognition.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FaceRecognition.mlpackage; sourceTree = "<group>"; };
+		27A8D861B4715FF8203C982A /* Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C7811D2A7E41AD730A515B9 /* Pods_PrivatePicResearchiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivatePicResearchiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF02BC967369C7ED4934181 /* Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5DB3FD4DC6232060ECA31278 /* Pods-PrivatePicResearchiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatePicResearchiOS.release.xcconfig"; path = "Target Support Files/Pods-PrivatePicResearchiOS/Pods-PrivatePicResearchiOS.release.xcconfig"; sourceTree = "<group>"; };
+		6DABC60EDD4B1674833AB8BB /* Pods-PrivatePicResearchiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatePicResearchiOS.debug.xcconfig"; path = "Target Support Files/Pods-PrivatePicResearchiOS/Pods-PrivatePicResearchiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A10D2F85297D6C20CC5FE601 /* Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD40A6E4B1CAB8A30813B4B5 /* Pods-PrivatePicResearchiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatePicResearchiOSTests.release.xcconfig"; path = "Target Support Files/Pods-PrivatePicResearchiOSTests/Pods-PrivatePicResearchiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB007F253B6A716B2596742E /* Pods_PrivatePicResearchiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivatePicResearchiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BBFC54EC788137AEE8B380 /* Pods-PrivatePicResearchiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatePicResearchiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PrivatePicResearchiOSTests/Pods-PrivatePicResearchiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E15C3A5CD18710EEE1BA15E /* Pods_PrivatePicResearchiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DBA54260EF59B5872766B9 /* Pods_PrivatePicResearchiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +108,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81ADB612265A7C4BEC7797CF /* Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		159D5A0C270FEA9E008AB014 /* BlockScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				159D5A0D270FEABD008AB014 /* PPBlockScreenShotViewController.swift */,
+				159D5A0E270FEABD008AB014 /* PPBlockScreenShotViewController.xib */,
+			);
+			path = BlockScreenShot;
+			sourceTree = "<group>";
+		};
 		15EBC257270EE833003CEA32 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +131,8 @@
 				15EBC279270EE834003CEA32 /* PrivatePicResearchiOSTests */,
 				15EBC283270EE834003CEA32 /* PrivatePicResearchiOSUITests */,
 				15EBC261270EE833003CEA32 /* Products */,
+				4777AD8CF4E8D4719FC53D17 /* Pods */,
+				B504CA7F1CA36AFA58C6C43E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +149,7 @@
 		15EBC262270EE833003CEA32 /* PrivatePicResearchiOS */ = {
 			isa = PBXGroup;
 			children = (
+				159D5A0C270FEA9E008AB014 /* BlockScreenShot */,
 				15EBC2BB270EEBE4003CEA32 /* FaceDetection */,
 				15EBC294270EE86E003CEA32 /* Utilities */,
 				15EBC263270EE833003CEA32 /* AppDelegate.swift */,
@@ -172,10 +205,34 @@
 			isa = PBXGroup;
 			children = (
 				15EBC2B3270EE8A5003CEA32 /* VideoCapture.swift */,
-				15EBC2A4270EE88C003CEA32 /* FaceDetectionViewController.swift */,
+				15EBC2A4270EE88C003CEA32 /* PPFaceDetectionViewController.swift */,
 				15FBAF24270EF93500D2FB08 /* FaceRecognition.mlpackage */,
+				155E77BB27103C8900A6B5FA /* PPFaceDetection.storyboard */,
 			);
 			path = FaceDetection;
+			sourceTree = "<group>";
+		};
+		4777AD8CF4E8D4719FC53D17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DABC60EDD4B1674833AB8BB /* Pods-PrivatePicResearchiOS.debug.xcconfig */,
+				5DB3FD4DC6232060ECA31278 /* Pods-PrivatePicResearchiOS.release.xcconfig */,
+				27A8D861B4715FF8203C982A /* Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.debug.xcconfig */,
+				2DF02BC967369C7ED4934181 /* Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.release.xcconfig */,
+				E3BBFC54EC788137AEE8B380 /* Pods-PrivatePicResearchiOSTests.debug.xcconfig */,
+				AD40A6E4B1CAB8A30813B4B5 /* Pods-PrivatePicResearchiOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B504CA7F1CA36AFA58C6C43E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C7811D2A7E41AD730A515B9 /* Pods_PrivatePicResearchiOS.framework */,
+				A10D2F85297D6C20CC5FE601 /* Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests.framework */,
+				DB007F253B6A716B2596742E /* Pods_PrivatePicResearchiOSTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15EBC28A270EE834003CEA32 /* Build configuration list for PBXNativeTarget "PrivatePicResearchiOS" */;
 			buildPhases = (
+				D14BB2C06A84C672D4D016E5 /* [CP] Check Pods Manifest.lock */,
 				15EBC25C270EE833003CEA32 /* Sources */,
 				15EBC25D270EE833003CEA32 /* Frameworks */,
 				15EBC25E270EE833003CEA32 /* Resources */,
+				FFEEF82A6146ECE95F4B7EED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15EBC28D270EE834003CEA32 /* Build configuration list for PBXNativeTarget "PrivatePicResearchiOSTests" */;
 			buildPhases = (
+				F46D670BBFF7B144A3ED138C /* [CP] Check Pods Manifest.lock */,
 				15EBC272270EE834003CEA32 /* Sources */,
 				15EBC273270EE834003CEA32 /* Frameworks */,
 				15EBC274270EE834003CEA32 /* Resources */,
@@ -220,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15EBC290270EE834003CEA32 /* Build configuration list for PBXNativeTarget "PrivatePicResearchiOSUITests" */;
 			buildPhases = (
+				D3443C4DB1F62B2A651C623D /* [CP] Check Pods Manifest.lock */,
 				15EBC27C270EE834003CEA32 /* Sources */,
 				15EBC27D270EE834003CEA32 /* Frameworks */,
 				15EBC27E270EE834003CEA32 /* Resources */,
+				E8EC3BA86930B573BF4DE223 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155E77BC27103C8900A6B5FA /* PPFaceDetection.storyboard in Resources */,
+				159D5A10270FEABD008AB014 /* PPBlockScreenShotViewController.xib in Resources */,
 				15EBC270270EE833003CEA32 /* LaunchScreen.storyboard in Resources */,
 				15EBC26D270EE833003CEA32 /* Assets.xcassets in Resources */,
 				15EBC26B270EE833003CEA32 /* Main.storyboard in Resources */,
@@ -304,6 +368,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D14BB2C06A84C672D4D016E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrivatePicResearchiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3443C4DB1F62B2A651C623D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8EC3BA86930B573BF4DE223 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests/Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46D670BBFF7B144A3ED138C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrivatePicResearchiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFEEF82A6146ECE95F4B7EED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrivatePicResearchiOS/Pods-PrivatePicResearchiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrivatePicResearchiOS/Pods-PrivatePicResearchiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrivatePicResearchiOS/Pods-PrivatePicResearchiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15EBC25C270EE833003CEA32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -315,7 +482,8 @@
 				15EBC268270EE833003CEA32 /* ViewController.swift in Sources */,
 				15EBC2A0270EE86E003CEA32 /* UIColor+Extensions.swift in Sources */,
 				15EBC264270EE833003CEA32 /* AppDelegate.swift in Sources */,
-				15EBC2A5270EE88C003CEA32 /* FaceDetectionViewController.swift in Sources */,
+				159D5A0F270FEABD008AB014 /* PPBlockScreenShotViewController.swift in Sources */,
+				15EBC2A5270EE88C003CEA32 /* PPFaceDetectionViewController.swift in Sources */,
 				15FBAF25270EF93500D2FB08 /* FaceRecognition.mlpackage in Sources */,
 				15EBC2B4270EE8A5003CEA32 /* VideoCapture.swift in Sources */,
 				15EBC29C270EE86E003CEA32 /* UIView+Extensions.swift in Sources */,
@@ -494,6 +662,7 @@
 		};
 		15EBC28B270EE834003CEA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DABC60EDD4B1674833AB8BB /* Pods-PrivatePicResearchiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +692,7 @@
 		};
 		15EBC28C270EE834003CEA32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB3FD4DC6232060ECA31278 /* Pods-PrivatePicResearchiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -552,6 +722,7 @@
 		};
 		15EBC28E270EE834003CEA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3BBFC54EC788137AEE8B380 /* Pods-PrivatePicResearchiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -577,6 +748,7 @@
 		};
 		15EBC28F270EE834003CEA32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD40A6E4B1CAB8A30813B4B5 /* Pods-PrivatePicResearchiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -602,6 +774,7 @@
 		};
 		15EBC291270EE834003CEA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A8D861B4715FF8203C982A /* Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +798,7 @@
 		};
 		15EBC292270EE834003CEA32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DF02BC967369C7ED4934181 /* Pods-PrivatePicResearchiOS-PrivatePicResearchiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
