@@ -8,6 +8,12 @@
 import UIKit
 import AVKit
 import Vision
+import Combine
+import LocalAuthentication
+import RxSwift
+import ARKit
+import RealityKit
+import SceneKit
 
 class PPFaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
@@ -22,12 +28,75 @@ class PPFaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputS
         return label
     }()
     
+    @Published var numberOfFace : Int?
+    @Published var cancelable = Set<AnyCancellable>()
+    @Published var validateFaceID : Bool?
+
+    let viewBlock = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpUI()
+        self.event()
         setupCamera()
         setupLabel()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+    }
+    
+    func setUpUI() {
+        self.viewBlock.backgroundColor = .white
+        self.viewBlock.frame = self.view.frame
+        self.viewBlock.isHidden = true
+        let button = UIButton()
+        button.setTitle("Validate Your Face", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        button.frame = CGRect(x: 16.0, y: self.viewBlock.center.y, width:500.0, height: 20.0)
+        button.addTarget(self, action: #selector(self.buttonValidateOwnPhone), for: .touchUpInside)
+        self.viewBlock.addSubview(button)
+    }
+    
+    func event() {
+        self.$numberOfFace.dropFirst().sink { _ in
+        
+        } receiveValue: { value in
+            if value != 1 {
+                self.viewBlock.isHidden = false
+            }
+        }.store(in: &self.cancelable)
+        
+        self.$validateFaceID
+            .sink { _ in
+            
+        } receiveValue: { value in
+            guard let value = value else { return }
+            if value {
+                DispatchQueue.main.sync {
+                    self.viewBlock.isHidden = true
+                }
+            }
+        }.store(in: &self.cancelable)
+
+    }
+    
+    @objc func buttonValidateOwnPhone() {
+        let reason = "Log in with Face ID"
+        var context = LAContext()
+        context.evaluatePolicy(
+            .deviceOwnerAuthentication,
+            localizedReason: reason
+        ) { success, error in
+            if success {
+                self.validateFaceID = true
+            } else {
+                self.validateFaceID = false
+            }
+        }
+    }
+    
     
     fileprivate func setupCamera() {
         let captureSession = AVCaptureSession()
@@ -43,6 +112,7 @@ class PPFaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputS
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         view.layer.addSublayer(previewLayer)
         previewLayer.frame = view.frame
+        view.addSubview(self.viewBlock)
         
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
@@ -70,6 +140,7 @@ class PPFaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputS
             
             DispatchQueue.main.async {
                 if let results = req.results {
+                    self.numberOfFace = results.count
                     self.numberOfFaces.text = "\(results.count)"
                 }
             }
@@ -88,3 +159,4 @@ class PPFaceDetectionViewController: UIViewController, AVCaptureVideoDataOutputS
     }
     
 }
+
