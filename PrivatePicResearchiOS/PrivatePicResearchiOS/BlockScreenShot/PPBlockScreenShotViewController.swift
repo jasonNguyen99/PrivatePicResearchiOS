@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Combine
+import Photos
 
 class PPBlockScreenShotViewController: UIViewController {
 
@@ -15,51 +17,105 @@ class PPBlockScreenShotViewController: UIViewController {
     let screenProtector = ScreenProtector()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NotificationCenter.default.rx.addObserver(
-//            forName: UIApplication.userDidTakeScreenshotNotification,
-//            object: nil,
-//            queue: .main) { notification in
-//                let view = UIView()
-//                view.bounds = CGRect(x: 0.0, y: 0.0, width: 100, height: 200)
-//                view.backgroundColor = .blue
-//                self.view.addSubview(view)
-//                print("screen shot")
-//            }
-//        NotificationCenter
-//            .default
-//            .rx
-//            .notification(UIApplication.userDidTakeScreenshotNotification, object: nil)
-//            .subscribe { _ in
-//                DispatchQueue.main.async {
-//                    self.screenProtector.hideScreen()
-//                    self.screenProtector.presentwarningWindow()
-////                    self.screenProtector.grandAccessAndDeleteTheLastPhoto()
-//                    }
-//            } onError: { _ in
-//                
-//            } onCompleted: {
-//                
-//            } onDisposed: {
-//                
-//            }.disposed(by: self.disposeBag)
+//        self.view.makeSecure()
+        NotificationCenter
+            .default
+            .rx
+            .notification(UIApplication.userDidTakeScreenshotNotification, object: nil)
+            .subscribe { _ in
+                self.fetchPhotos()
+                UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0)
+                        guard let context = UIGraphicsGetCurrentContext() else { return }
+                self.view.layer.render(in: context)
+                        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
+                        UIGraphicsEndImageContext()
+                        
+                        //Save it to the camera roll
+                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//                self.detectScreenShot()
+            } onError: { _ in
 
-        
-//        let image = UIScene
-        
-//        NotificationCenter.default.addObserver(
-//            forName: UIApplication.,
-//            object: nil,
-//            queue: .main) { notification in
-//                let view = UIView()
-//                view.bounds = CGRect(x: 0.0, y: 0.0, width: 100, height: 200)
-//                view.backgroundColor = .blue
-//                self.view.addSubview(view)
-//                print("screen shot")
-//            }
+            } onCompleted: {
+
+            } onDisposed: {
+
+            }.disposed(by: self.disposeBag)
     }
     
+    func fetchPhotos () {
+            // Sort the images by descending creation date and fetch the first 3
+            let fetchOptions = PHFetchOptions()
+                    //Print out all library Photos
+            let library = PHAsset.fetchAssets(with: .image, options: PHFetchOptions())
+            print("Total Media Photos: \(library.count)")
+            
+                    //Potentially Fetching the Image Based on the Screenshot identifier.
+            fetchOptions.predicate = NSPredicate(format: "(mediaSubtype & %d) != 0", PHAssetMediaSubtype.photoScreenshot.rawValue)
+            
+                //Fetching Screen Shots
+            let result2 = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+            
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.deleteAssets(result2.lastObject)
+        }, completionHandler: {
+                success, error in
+            
+        })
+//            UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0)
+//            guard let context = UIGraphicsGetCurrentContext() else { return }
+//            self.view.layer.render(in: context)
+//            guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
+//            UIGraphicsEndImageContext()
+//
+//            //Save it to the camera roll
+//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//            print("Screenshots: \(result2.count) :: 2")
+        }
+    
     func detectScreenShot() {
-        
+        var fetchOptions: PHFetchOptions = PHFetchOptions()
+
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+
+        var fetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
+
+        if (fetchResult.lastObject != nil) {
+
+            var lastAsset: PHAsset = fetchResult.lastObject! as PHAsset
+
+            let arrayToDelete = NSArray(object: lastAsset)
+            
+            
+                        var assetResultsF = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
+                        PHImageManager.default().requestImageDataAndOrientation(for: lastAsset, options: nil,
+                                resultHandler: { (imagedata, dataUTI, orientation, info) in
+                                    if let imageSource = CGImageSourceCreateWithData(imagedata! as CFData, nil) {
+                                        let uti: CFString = CGImageSourceGetType(imageSource)!
+                                        let dataWithEXIF: NSMutableData = NSMutableData(data: imagedata!)
+                                        let destination: CGImageDestination = CGImageDestinationCreateWithData((dataWithEXIF as CFMutableData), uti, 1, nil)!
+
+                                        let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil)! as NSDictionary
+
+                                        let mutable: NSMutableDictionary = imageProperties.mutableCopy() as! NSMutableDictionary
+
+                                        let EXIFDictionary: NSMutableDictionary = (mutable[kCGImagePropertyExifDictionary as String] as? NSMutableDictionary)!
+
+                                        EXIFDictionary[kCGImagePropertyExifUserComment as String] = "type:photo"
+
+                                        mutable[kCGImagePropertyExifDictionary as String] = EXIFDictionary
+
+                                        CGImageDestinationAddImageFromSource(destination, imageSource, 0, (mutable as CFDictionary))
+                                        CGImageDestinationFinalize(destination)
+
+                                    }
+                                })
+            PHPhotoLibrary.shared().performChanges({
+                
+            }, completionHandler: {
+                    success, error in
+                
+            })
+        }
     }
 
 }
@@ -148,5 +204,49 @@ class ScreenProtector {
     // MARK: - Deinit
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+}
+
+extension PHAsset {
+
+func updateChanges(with img:UIImage,completion:@escaping(PHAsset?)->()){
+
+    PHPhotoLibrary.shared().performChanges({
+        // create cropped image into phphotolibrary
+        PHAssetChangeRequest.creationRequestForAsset(from: img)
+    }) { (success, error) in
+        if success{
+            // fetch request to get last created asset
+            let fetchOptions = PHFetchOptions()
+            fetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: false)]
+            fetchOptions.fetchLimit = 1
+            let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
+
+            if let asset = fetchResult.firstObject{
+                // replace your selected asset with new cropped one
+                completion(asset)
+            }else{
+                completion(nil)
+            }
+
+        }else{
+            completion(nil)
+        }
+    }
+
+}
+}
+
+extension UIView {
+    func makeSecure() {
+        DispatchQueue.main.async {
+            let field = UITextField()
+            field.isSecureTextEntry = true
+            self.addSubview(field)
+            field.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            field.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            self.layer.superlayer?.addSublayer(field.layer)
+            field.layer.sublayers?.first?.addSublayer(self.layer)
+        }
     }
 }

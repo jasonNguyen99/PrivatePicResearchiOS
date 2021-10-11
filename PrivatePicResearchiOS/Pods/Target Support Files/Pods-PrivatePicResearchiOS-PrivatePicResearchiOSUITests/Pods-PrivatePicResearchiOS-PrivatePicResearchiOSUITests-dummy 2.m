@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests : NSObject
+@end
+@implementation PodsDummy_Pods_PrivatePicResearchiOS_PrivatePicResearchiOSUITests
+@end
