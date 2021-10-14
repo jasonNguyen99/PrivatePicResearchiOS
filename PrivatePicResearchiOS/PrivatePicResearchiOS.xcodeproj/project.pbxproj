@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15C66C87271811310051E271 /* PPWallDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C66C86271811310051E271 /* PPWallDetectionViewController.swift */; };
+		15C66C89271811AA0051E271 /* PreviewMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C66C88271811AA0051E271 /* PreviewMetalView.swift */; };
+		15C7034B2718167D00F24D43 /* VideoMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7034A2718167D00F24D43 /* VideoMixer.swift */; };
+		15C7034D2718168C00F24D43 /* DepthToJETConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7034C2718168C00F24D43 /* DepthToJETConverter.swift */; };
+		15C7034F2718194F00F24D43 /* FilterRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7034E2718194F00F24D43 /* FilterRenderer.swift */; };
+		15C7035927181A1800F24D43 /* HistogramCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7035827181A1800F24D43 /* HistogramCalculator.m */; };
+		15C7035F27181C7500F24D43 /* PointCloud.metal in Sources */ = {isa = PBXBuildFile; fileRef = 15C7035B27181C7500F24D43 /* PointCloud.metal */; };
+		15C7036027181C7500F24D43 /* Mixer.metal in Sources */ = {isa = PBXBuildFile; fileRef = 15C7035C27181C7500F24D43 /* Mixer.metal */; };
+		15C7036127181C7500F24D43 /* DepthToJET.metal in Sources */ = {isa = PBXBuildFile; fileRef = 15C7035D27181C7500F24D43 /* DepthToJET.metal */; };
+		15C7036227181C7500F24D43 /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 15C7035E27181C7500F24D43 /* PassThrough.metal */; };
+		15C7036827181C7D00F24D43 /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15C7036527181C7D00F24D43 /* AAPLTransforms.mm */; };
+		15C7036927181C7D00F24D43 /* PointCloudMetalView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15C7036727181C7D00F24D43 /* PointCloudMetalView.mm */; };
 		15EBC264270EE833003CEA32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC263270EE833003CEA32 /* AppDelegate.swift */; };
 		15EBC266270EE833003CEA32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC265270EE833003CEA32 /* SceneDelegate.swift */; };
 		15EBC268270EE833003CEA32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EBC267270EE833003CEA32 /* ViewController.swift */; };
@@ -45,6 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15C66C86271811310051E271 /* PPWallDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPWallDetectionViewController.swift; sourceTree = "<group>"; };
+		15C66C88271811AA0051E271 /* PreviewMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewMetalView.swift; sourceTree = "<group>"; };
+		15C7034A2718167D00F24D43 /* VideoMixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMixer.swift; sourceTree = "<group>"; };
+		15C7034C2718168C00F24D43 /* DepthToJETConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthToJETConverter.swift; sourceTree = "<group>"; };
+		15C7034E2718194F00F24D43 /* FilterRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterRenderer.swift; sourceTree = "<group>"; };
+		15C7035727181A1800F24D43 /* HistogramCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistogramCalculator.h; sourceTree = "<group>"; };
+		15C7035827181A1800F24D43 /* HistogramCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistogramCalculator.m; sourceTree = "<group>"; };
+		15C7035B27181C7500F24D43 /* PointCloud.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PointCloud.metal; sourceTree = "<group>"; };
+		15C7035C27181C7500F24D43 /* Mixer.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Mixer.metal; sourceTree = "<group>"; };
+		15C7035D27181C7500F24D43 /* DepthToJET.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DepthToJET.metal; sourceTree = "<group>"; };
+		15C7035E27181C7500F24D43 /* PassThrough.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PassThrough.metal; sourceTree = "<group>"; };
+		15C7036427181C7D00F24D43 /* PointCloudMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointCloudMetalView.h; sourceTree = "<group>"; };
+		15C7036527181C7D00F24D43 /* AAPLTransforms.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTransforms.mm; sourceTree = "<group>"; };
+		15C7036627181C7D00F24D43 /* AAPLTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTransforms.h; sourceTree = "<group>"; };
+		15C7036727181C7D00F24D43 /* PointCloudMetalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointCloudMetalView.mm; sourceTree = "<group>"; };
 		15EBC260270EE833003CEA32 /* PrivatePicResearchiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatePicResearchiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EBC263270EE833003CEA32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EBC265270EE833003CEA32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +121,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15C66C85271811100051E271 /* WallDetection */ = {
+			isa = PBXGroup;
+			children = (
+				15C7036327181C7D00F24D43 /* PointCloud */,
+				15C7035A27181C7500F24D43 /* Shaders */,
+				15C7035727181A1800F24D43 /* HistogramCalculator.h */,
+				15C7035827181A1800F24D43 /* HistogramCalculator.m */,
+				15C7034A2718167D00F24D43 /* VideoMixer.swift */,
+				15C7034E2718194F00F24D43 /* FilterRenderer.swift */,
+				15C66C86271811310051E271 /* PPWallDetectionViewController.swift */,
+				15C66C88271811AA0051E271 /* PreviewMetalView.swift */,
+				15C7034C2718168C00F24D43 /* DepthToJETConverter.swift */,
+			);
+			path = WallDetection;
+			sourceTree = "<group>";
+		};
+		15C7035A27181C7500F24D43 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				15C7035B27181C7500F24D43 /* PointCloud.metal */,
+				15C7035C27181C7500F24D43 /* Mixer.metal */,
+				15C7035D27181C7500F24D43 /* DepthToJET.metal */,
+				15C7035E27181C7500F24D43 /* PassThrough.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		15C7036327181C7D00F24D43 /* PointCloud */ = {
+			isa = PBXGroup;
+			children = (
+				15C7036427181C7D00F24D43 /* PointCloudMetalView.h */,
+				15C7036527181C7D00F24D43 /* AAPLTransforms.mm */,
+				15C7036627181C7D00F24D43 /* AAPLTransforms.h */,
+				15C7036727181C7D00F24D43 /* PointCloudMetalView.mm */,
+			);
+			path = PointCloud;
+			sourceTree = "<group>";
+		};
 		15EBC257270EE833003CEA32 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +182,7 @@
 		15EBC262270EE833003CEA32 /* PrivatePicResearchiOS */ = {
 			isa = PBXGroup;
 			children = (
+				15C66C85271811100051E271 /* WallDetection */,
 				15EBC2BB270EEBE4003CEA32 /* FaceDetection */,
 				15EBC294270EE86E003CEA32 /* Utilities */,
 				15EBC263270EE833003CEA32 /* AppDelegate.swift */,
@@ -246,6 +312,7 @@
 				TargetAttributes = {
 					15EBC25F270EE833003CEA32 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					15EBC275270EE834003CEA32 = {
 						CreatedOnToolsVersion = 13.0;
@@ -309,14 +376,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C7035927181A1800F24D43 /* HistogramCalculator.m in Sources */,
 				15EBC2A1270EE86E003CEA32 /* UIViewController+Extension.swift in Sources */,
+				15C7035F27181C7500F24D43 /* PointCloud.metal in Sources */,
 				15EBC29D270EE86E003CEA32 /* Date+Extension.swift in Sources */,
 				15EBC29F270EE86E003CEA32 /* UIImage+Extension.swift in Sources */,
+				15C7036927181C7D00F24D43 /* PointCloudMetalView.mm in Sources */,
+				15C7036027181C7500F24D43 /* Mixer.metal in Sources */,
+				15C7036227181C7500F24D43 /* PassThrough.metal in Sources */,
 				15EBC268270EE833003CEA32 /* ViewController.swift in Sources */,
 				15EBC2A0270EE86E003CEA32 /* UIColor+Extensions.swift in Sources */,
 				15EBC264270EE833003CEA32 /* AppDelegate.swift in Sources */,
 				15EBC2A5270EE88C003CEA32 /* FaceDetectionViewController.swift in Sources */,
+				15C7036127181C7500F24D43 /* DepthToJET.metal in Sources */,
+				15C7034F2718194F00F24D43 /* FilterRenderer.swift in Sources */,
+				15C7036827181C7D00F24D43 /* AAPLTransforms.mm in Sources */,
+				15C7034D2718168C00F24D43 /* DepthToJETConverter.swift in Sources */,
+				15C7034B2718167D00F24D43 /* VideoMixer.swift in Sources */,
 				15FBAF25270EF93500D2FB08 /* FaceRecognition.mlpackage in Sources */,
+				15C66C87271811310051E271 /* PPWallDetectionViewController.swift in Sources */,
+				15C66C89271811AA0051E271 /* PreviewMetalView.swift in Sources */,
 				15EBC2B4270EE8A5003CEA32 /* VideoCapture.swift in Sources */,
 				15EBC29C270EE86E003CEA32 /* UIView+Extensions.swift in Sources */,
 				15EBC266270EE833003CEA32 /* SceneDelegate.swift in Sources */,
@@ -497,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UBQ6QU7N6S;
@@ -516,6 +596,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PrivatePic.PrivatePicResearchiOS.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = PrivatePicResearchiOS/WallDetection/HistogramCalculator.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -526,6 +608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UBQ6QU7N6S;
@@ -545,6 +628,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PrivatePic.PrivatePicResearchiOS.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = PrivatePicResearchiOS/WallDetection/HistogramCalculator.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

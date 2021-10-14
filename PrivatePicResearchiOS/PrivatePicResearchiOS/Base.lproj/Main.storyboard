@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3a-07-B1V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UsG-mV-svb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -53,6 +53,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffR-NE-mQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.579710144927539" y="83.705357142857139"/>
+        </scene>
+        <!--Wall Detection View Controller-->
+        <scene sceneID="81E-wm-ORo">
+            <objects>
+                <viewController storyboardIdentifier="PPWallDetectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UsG-mV-svb" customClass="PPWallDetectionViewController" customModule="PrivatePicResearchiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dm-2d-DRJ" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9G-ad-0e5" userLabel="2D View" customClass="PreviewMetalView" customModule="PrivatePicResearchiOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hOh-ux-hgK"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hOh-ux-hgK" firstAttribute="trailing" secondItem="v9G-ad-0e5" secondAttribute="trailing" id="830-Ba-xjq"/>
+                            <constraint firstItem="hOh-ux-hgK" firstAttribute="bottom" secondItem="v9G-ad-0e5" secondAttribute="bottom" id="CAr-tR-H3n"/>
+                            <constraint firstItem="v9G-ad-0e5" firstAttribute="top" secondItem="3dm-2d-DRJ" secondAttribute="top" id="nFk-Ej-Kjc"/>
+                            <constraint firstItem="v9G-ad-0e5" firstAttribute="leading" secondItem="hOh-ux-hgK" secondAttribute="leading" id="vOp-vL-xWx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jetView" destination="v9G-ad-0e5" id="MO7-hE-RHi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjK-sg-trt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="84"/>
         </scene>
     </scenes>
     <resources>
